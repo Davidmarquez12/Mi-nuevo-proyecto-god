@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-=Edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Eventos</title>
+        <link href="/manejodeeventos.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <ul>
+            <li><a href="login.html">REGISTRO</a></li>
+            <li><a href="/index.html">INDEX</a></li>
+            <li><a href="/pagina1.html">PAGINA1</a></li>
+            <li><a href="/pagina2.html">PAGINA2</a></li>
+            <li><a href="/tablas.html">TABLAS</a></li>
+            <li><a href="/DOCUMENT.html">DOCUMENT</a></li>
+            <li><a href="/LISTADO.html">LISTADO</a></li>
+            <li><a href="https://www.lugaresturisticosdeveracruz.com/coatzacoalcos/">PAGINA TURISTICA</a></li>
+        
+        </ul>
+
+        <h1 id="tituloh1">AGREGA EL MEJOR LUGAR QUE HAYAS VISITADO EN COATZACOALCOS</h1>
+        <br/>
+
+        <form id="formulario">
+            Nombre del lugar: <input  type="text" id="name"/>
+            <br/>
+            <br/>
+            
+        </form>
+
+        <button onclick = "mostrarValores()">Mostrar</button>
+        <br>
+        <br>
+
+        <div id="valores"></div>
+        <script>
+
+            function mostrarValores(){
+                const formulario1 = document.forms['formulario']
+                let texto = ''
+                for(item of formulario1 ){
+                    texto += item.value + ' '
+                }
+
+                console.log (texto)
+                document.getElementById('valores').innerHTML = texto
+            }
+            const form1 = document.getElementById("formulario")
+            form1.addEventListener("focus", (evento)=>{
+                evento.target.style.background="pink"
+            }, true)
+
+            form1.addEventListener("blur", (evento)=>{
+                    evento.target.style.background="white"
+            }, true)
+                
+        </script>
+    </body>
+</html>

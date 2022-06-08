@@ -144,3 +144,20 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
+ul{
+    list-style-type: none;
+    background-color: blue;
+    overflow: hidden;
+}
+li a{
+    float: left;
+    display: block;
+    padding: 15px;
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: aqua;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .azul{
+            color:brown
+        }
+    </style>
+</head>
+<link href="/DOCUMENT.css" rel="stylesheet"/>
+<body>
+
+    <ul>
+        <li><a href="login.html">REGISTRO</a></li>
+        <li><a href="/index.html">INDEX</a></li>
+        <li><a href="/pagina1.html">PAGINA1</a></li>
+        <li><a href="/pagina2.html">PAGINA2</a></li>
+        <li><a href="/tablas.html">TABLAS</a></li>
+        <li><a href="/manejodeeventos.html">EVENTOS</a></li>
+        <li><a href="/LISTADO.html">LISTADO</a></li>
+        <li><a href="https://www.lugaresturisticosdeveracruz.com/coatzacoalcos/">PAGINA TURISTICA</a></li>
+    
+    </ul>
+
+    <h1 id = "encabezado" class="azul">EJEMPLO JAVASCRIPT</h1>
+    <p id ="parrafo1">ITESCO</p>
+    <p id ="parrafo2" class="azul">Ing. Informatica</p>
+    <p id ="parrafo3">Desarrollo Aplicaciones web</p>
+    <p id ="parrafo4" class="azul">30 mayo 2022</p>
+    <script>
+        console.log("Bienvenido a Javascript")
+        const encabezadoH1 = document.getElementById('encabezado')
+        const {innerHTML} = encabezadoH1
+        console.log(encabezadoH1)
+
+        console.log('INNER USANDO EL OBJETO: ' + innerHTML)
+        console.log('Inner destructurado: ' + innerHTML)
+        console.log('------------------')
+
+        const parrafoP1 = document.getElementById('parrafo1')
+        console.log('PARRAFO1: ' + parrafoP1.innerHTML)
+        console.log(`Valor del encabezado: ${encabezadoH1.innerHTML} y el valor del perrafo`)
+        parrafoP1.innerHTML += ` TECNM `
+        console.log(`El valor del parrafo1 modificado es ${parrafoP1.innerHTML}`)
+        
+        console.log('------------------------------------')
+
+        const parrafos = document.getElementsByTagName('p')
+        console.log(`Número de párrafos: ${parrafos.length}`)
+        for(let i = 0; i < parrafos.length; i++ ){
+
+        console.log(`En el parrafo ${i} el valor es: ${parrafos[i].innerHTML}`)
+        }
+        console.log('------------------------------------')
+
+        const elementsByClass = document.getElementsByClassName("azul")
+        console.log(`Número de elementos de la clase azul: ${elementsByClass.length}`)
+        for(let i = 0; i < elementsByClass.length; i++){
+            console.log(`Valor del elemento: ${elementsByClass[i].innerHTML}`)
+        }
+
+        console.log('------------------------------------')
+        const elementsByTypeAndClass = document.querySelectorAll('p.azul')
+        for(item of elementsByTypeAndClass){
+            console.log(`Valor del párrafo azul: ${item.innerHTML}`)
+        }
+    </script>
+</body>
+</html>
